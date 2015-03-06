@@ -9,18 +9,53 @@ BootstrapCake is a shell template for rapidly developing beautiful Bootstrap the
 
 ## Installation
 
-* Extract the files into the proper directory.
-* Update your App Controller (app/Controller/AppController.php) to use the Bootstrap layout
-
+In your current project folder you can clone BootstrapCake using:
+```bash
+git clone https://github.com/lucascampelo/BootstrapCake.git Plugin/BootstrapCake
 ```
-class AppController extends Controller {
-	public function beforeFilter(){
-		$this->layout = 'bootstrap';
-	}
+
+OR
+
+Using as Submodule:
+```bash
+git submodule add https://github.com/lucascampelo/BootstrapCake.git Plugin/BootstrapCake
+```
+PS: If you have problem using submodule, try `git submodule init` before add submodule, and `git submodule update` after.
+
+OR
+
+Extract the files into the proper directory (probably `app\Plugin`) and rename folder to `BootstrapCake`.
+
+## Usage
+Can you generate views and controllers to use in your project with commands below:
+* Generating Controller:
+```bash
+Console\cake bake controller Users -t bootstrap
+```
+
+* Generating View:
+```bash
+Console\cake bake view Users -t bootstrap
+```
+
+
+## Customization
+Can you use Bootstrap Layout and elements in your own Views and Controllers importing plugin files:
+* On view files:
+```php
+# Views\Pages\bootstrap-example.ctp
+echo echo $this->element('BootstrapCake.navigation');
+```
+
+* On controllers files:
+```php
+# Controller\UsersController.php
+public function beforeFilter() {
+    // your app code here
+    $this->layout = 'BootstrapCake.bootstrap';
 }
 ```
 
-* Start baking! If you've never used the console, here's a great tutorial: [http://book.cakephp.org/2.0/en/console-and-shells/code-generation-with-bake.html](http://book.cakephp.org/2.0/en/console-and-shells/code-generation-with-bake.html)
-* Make sure you select the bootstrap template when prompted
+To customize views, I sugest you generate view files using `Console\cake bake` explained above and make your own changes.
 
-For more information and screenshots, please visit [http://www.ekoim.com/blog/bootstrap-cakephp-bootstrapcake/](http://www.ekoim.com/blog/bootstrap-cakephp-bootstrapcake/)
+Thanks for use!

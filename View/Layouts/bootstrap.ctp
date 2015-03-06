@@ -38,7 +38,7 @@
 
   <body>
 
-    <?php echo $this->Element('BootstrapCake.navigation'); ?>
+    <?php echo $this->element('BootstrapCake.navigation'); ?>
 
     <div class="container">
 
