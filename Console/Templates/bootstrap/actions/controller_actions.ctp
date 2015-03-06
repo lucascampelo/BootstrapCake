@@ -152,3 +152,7 @@
 		}
 <?php endif; ?>
 	}
+
+	public function beforeFilter(){
+		$this->layout = 'BootstrapCake.bootstrap';
+	}
