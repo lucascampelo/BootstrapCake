@@ -13,7 +13,7 @@ App::uses('Set', 'Utility');
 class BootstrapFormHelper extends FormHelper {
 
 	public $helpers = array('Html' => array(
-		'className' => 'BoostCake.BoostCakeHtml'
+		'className' => 'BootstrapCake.BootstrapHtml'
 	));
 
 	protected $_divOptions = array();
