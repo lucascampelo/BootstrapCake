@@ -154,5 +154,6 @@
 	}
 
 	public function beforeFilter(){
+		parent::beforeFilter();
 		$this->layout = 'BootstrapCake.bootstrap';
 	}
